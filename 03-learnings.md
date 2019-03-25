@@ -3,5 +3,5 @@ layout: archive
 title: Learnings and Rants
 permalink: /learnings/
 tagline: "My experiences and encounters with the field of software engineering and data science"
-category: "learnings"
+categories: ["learning", "rant"]
 ---
