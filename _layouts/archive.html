@@ -5,7 +5,7 @@ layout: page
 
 {% for post in site.posts %}
 {% for cat in post.categories %}
-{% if cat == page.category %}
+{% if cat == page.category or page.categories contains cat %}
 
 
 
