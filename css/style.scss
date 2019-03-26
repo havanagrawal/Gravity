@@ -7,7 +7,7 @@
 
 // Our variables
 $base-font-family: "PT Sans", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-size:   12px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -525,7 +525,7 @@ pre {
   margin-bottom: $spacing-unit;
   padding-bottom: 3em !important;
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   h2 {
     font-size: 32px;
@@ -660,4 +660,30 @@ pre {
     .vg    { color: #008080 } // Name.Variable.Global
     .vi    { color: #008080 } // Name.Variable.Instance
     .il    { color: #099 } // Literal.Number.Integer.Long
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: #696969;
+  color: whitesmoke;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
