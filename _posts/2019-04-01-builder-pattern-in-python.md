@@ -66,6 +66,10 @@ class CartesianPoint {
   public CartesianPoint(double x) {
     this(x, 0.0, 0.0);
   }
+
+  public CartesianPoint() {
+    this(0.0, 0.0, 0.0);
+  }
 }
 ```
 
