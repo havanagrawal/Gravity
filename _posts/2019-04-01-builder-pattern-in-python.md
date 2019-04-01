@@ -22,7 +22,7 @@ For example:
 
 ```java
 class Person {
-  public Person(String first, String middle, String last) {
+  public Person(String firstName, String middleName, String lastName) {
     ...
   }
 }
@@ -39,9 +39,9 @@ While most modern IDE's will annotate the arguments, one cannot always rely on d
 ```java
 // Using inline comments to annotate the arguments
 Person p = new Person(
-  /* first = */ "Jonathan",
-  /* middle = */ "John",
-  /* last = */ "Johnson"
+  /* firstName = */ "Jonathan",
+  /* middleName = */ "John",
+  /* lastName = */ "Johnson"
 );
 ```
 
@@ -77,9 +77,9 @@ The problem with this is that we end up with multiple overloaded constructors, a
 
 ```java
 // Easy to identify each string as a part of the Person object
-Person p = new PersonBuilder().setFirst("Jonathan")
-                              .setMiddle("John")
-                              .setLast("Johnson")
+Person p = new PersonBuilder().setFirstName("Jonathan")
+                              .setMiddleName("John")
+                              .setLastName("Johnson")
                               .build();
 
 // x and y default to 0 in the builder
@@ -92,15 +92,15 @@ I was initially tempted to create a transliteration of the builder pattern in Py
 
 ```python
 class Person:
-  def __init__(self, first, middle, last):
-    self.first = first
+  def __init__(self, first_name, middle_name, last_name):
+    self.first_name = first_name
     ...
 
 # Easy to identify each string as a part of the Person object
 p = Person(
-  first="Jonathan",
-  middle="John",
-  last="Johnson"
+  first_name="Jonathan",
+  middle_name="John",
+  last_name="Johnson"
 )
 
 
