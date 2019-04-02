@@ -88,7 +88,7 @@ CartesianPoint pt = new CartesianPointBuilder().setZ(10).build();
 
 ### Why is there no Builder pattern in Python?
 
-I was initially tempted to create a transliteration of the builder pattern in Python, but I decided to Google it anyway, which led me to this [excellent StackOverflow answer](https://stackoverflow.com/a/11977454/4014685). It turns out that Python as a language does not suffer from these problems because it supports both named arguments and default values for arguments, allowing one to do this:
+I was initially tempted to create a literal translation of the builder pattern in Python, but I decided to Google it anyway, which led me to this [excellent StackOverflow answer](https://stackoverflow.com/a/11977454/4014685). It turns out that Python as a language does not suffer from these problems because it supports both named arguments and default values for arguments, allowing one to do this:
 
 ```python
 class Person:
