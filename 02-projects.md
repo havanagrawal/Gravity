@@ -46,7 +46,7 @@ We infer conversations between characters in literature using named entity recog
 
 Data are scraped using a site-wide crawler on Goodreads, extracting details from `/book/show` and `/author/show` type pages. This enables the collection of a large, rich, high-quality dataset which can be used for quantitative analyses, visualization and augmenting other datasets. The crawlers are focused, enabling the collection of very specific datasets, such as all books from a <span class="tooltip">Listopia<span class="tooltiptext">Listopia is basically a whole lot of lists of books, each one being ordered by members votes. Each member who votes on a list can order their individual votes, which are then used to generate the order of the master list.</span></span> list.
 
-**Keywords**: web crawling, data mining  
+**Keywords**: web crawling, data mining, asynchronous programming  
 **Project Timeline**: Sep 2017 - Current  
 **Technologies**: Python  
 **Libraries**: scrapy, selenium  
