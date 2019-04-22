@@ -2,7 +2,7 @@
 layout: post
 title:  "Probability Trees"
 date:   2019-04-19 11:13:00 -0700
-category: "learning"
+categories: ["learning", "pinned"]
 ---
 
 I recently interviewed for a data scientist/machine learning engineer position, and was asked this common interview question.

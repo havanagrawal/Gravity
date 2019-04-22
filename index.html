@@ -5,6 +5,22 @@ layout: default
 <div class="home">
 
   <br />
+  <h1>Pinned Posts</h1>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      {% if post.categories contains "pinned" %}
+        <li>
+          <span class="post-meta-main">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+          <h2>
+            <a class="post-link-main" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <br />
   <h1>Recent Posts</h1>
 
   <!--{% for post in paginator.posts%}
@@ -24,6 +40,19 @@ layout: default
   </div>
 
   {% endfor %}
+  -->
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <span class="post-meta-main">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link-main" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
   {% if paginator.total_pages > 1 %}
     <nav class="pagination">
       {% if paginator.previous_page %}
@@ -44,19 +73,6 @@ layout: default
       <a class="paginationLink" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
     {% endif %}
     </nav>
-  {% endif %}-->
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta-main">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link-main" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-
+  {% endif %}
 
 </div>

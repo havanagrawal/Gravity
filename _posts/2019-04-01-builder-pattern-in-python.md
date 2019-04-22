@@ -2,7 +2,7 @@
 layout: post
 title:  "The Builder Pattern in Python"
 date:   2019-04-01 11:13:00 -0700
-category: "learning"
+category: ["learning", "pinned"]
 ---
 
 While writing a small scraper, I came across a design problem that I would have mostly solved with a builder in Java, which led me to wonder if an equivalent exists in Python.
