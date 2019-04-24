@@ -52,7 +52,7 @@ $$\Rightarrow 0.99 \cdot 0.01 + 0.01 \cdot 0.99$$
 This gives us:
 
 {% raw %}
-$$P(disease|positive) = \frac{0.99 \cdot 0.01}{0.99 \cdot 0.01 + 0.01 \cdot 0.99}$$
+$$P(D|P) = \frac{0.99 \cdot 0.01}{0.99 \cdot 0.01 + 0.01 \cdot 0.99}$$
 
 $$ \Rightarrow 0.5$$
 {% endraw %}
