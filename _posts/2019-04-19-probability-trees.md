@@ -76,7 +76,7 @@ $$P(P) = 0.99 \cdot 0.01 + 0.01 \cdot 0.99$$
 The probability that we have the disease if we tested positive is given by looking at all the branches where this is true:
 
 {% raw %}
-$$P(D \cup P) = 0.01 \cdot 0.99$$
+$$P(D \cap P) = 0.01 \cdot 0.99$$
 {% endraw %}
 
 Thus the probability that we have the disease given that we tested positive is given by dividing the latter by the former:
