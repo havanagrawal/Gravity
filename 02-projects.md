@@ -4,9 +4,20 @@ title: Projects
 permalink: /projects/
 tagline: "What am I building"
 ---
-
 <br/>
+## <a class="githubIcon" href="https://github.com/havanagrawal/wikidata-toolkit"><img src="{{ site.url }}/assets/img/github.png" width="25" height="25" style="padding: 0px 0px 8px 0px"/></a> Wikidata Toolkit - Bots to Fix Data Inconsistencies on Wikidata
 
+[Wikidata](https://www.wikidata.org) is a free and open knowledge base that can be read and edited by both humans and machines, and acts as central storage for the structured data of its Wikimedia sister projects including Wikipedia, Wikivoyage, Wiktionary, Wikisource, and others. The Wikidata toolkit provides bots and scripts that work on television series and episodes to improve data quality. Here are some [stats](https://xtools.wmflabs.org/ec/www.wikidata.org/TheFireBenderBot) for the bot.
+
+A core part of the implementation is a simple rule engine, where arbitrary constraints on the data can be verified and enforced.
+
+**Keywords**: open source, rule engine  
+**Project Timeline**: July 2019 - Current  
+**Technologies**: Python  
+**Libraries**: [click](https://click.palletsprojects.com/en/7.x/), [pywikibot](https://doc.wikimedia.org/pywikibot/master/)  
+
+---
+<br/>
 ## <a class="githubIcon" href="https://github.com/havanagrawal/clomask"><img src="{{ site.url }}/assets/img/github.png" width="25" height="25" style="padding: 0px 0px 8px 0px"/></a> Clomask - Object Detection, Segmentation and Classification using Mask-RCNN
 
 Clomask is an application of <span class="tooltip">Mask-RCNN<span class="tooltiptext">Mask Region-based Convolutional Neural Networks generate binary image masks for objects in an image</span></span> to perform object detection and <span class="tooltip">semantic segmentation<span class="tooltiptext">associating each pixel of the image with a label</span></span> of retail products such as bottles, candy bags and cereal boxes. We trained it on a synthetically generated dataset, achieving a weighted <span class="tooltip">mAP<span class="tooltiptext"><b>a</b>verage <b>p</b>recision is the precision for a single image averaged over multiple intersection-over-union values. <b>m</b>ean <b>a</b>verage <b>p</b>recision (mAP) is for the entire dataset</span></span> of 0.586.
@@ -53,7 +64,7 @@ Data are scraped using a site-wide crawler on Goodreads, extracting details from
 
 ---  
 <br/>
-## FollowApp - A Low-Cost High-Efficacy Vaccination Reminder
+## <a class="githubIcon" href="https://github.com/Morgan-Stanley/followapp-core"><img src="{{ site.url }}/assets/img/github.png" width="25" height="25" style="padding: 0px 0px 8px 0px"/></a>FollowApp - A Low-Cost High-Efficacy Vaccination Reminder
 
 Developed as part of a technology innovation program at Morgan Stanley, FollowApp is an end-to-end application that reminds parents and/or guardians of pending vaccinations for their children through automated calls. Their responses to the call are recorded for scheduling future calls. Among other modules, we developed an interface that was agnostic to the <span class="tooltip">IVR<span class="tooltiptext"><b>I</b>nteractive <b>V</b>oice <b>R</b>esponse is an automated telephony system that interacts with callers, gathers information and routes calls to the appropriate recipients.</span></span> service provider, allowing us to switch providers (Twilio, Exotel, imimobile) with minimal development effort. The project won the first prize for technological innovation, and has been covered [in](https://www.thebetterindia.com/121451/this-mumbai-womans-app-is-helping-slum-mothers-get-their-kids-vaccinated-on-time/) [media](https://twitter.com/morganstanley/status/930654095542771713?lang=en) [several](https://www.mid-day.com/articles/mumbai-news-mumbai-techie-creates-app-to-help-mothers-remember-when-to-vaccinate-children/18772196) [times](https://www.thehindu.com/news/cities/mumbai/an-app-that-beeps-vaccination-reminders/article21236265.ece).   
 
