@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "Python Cheat Sheet for Interviews"
+title:  "Python Reference Sheet for Interviews"
 date:   2019-10-11 11:13:00 -0700
 category: ["learning"]
 ---
 
 A quick reference for coding interviews in Python, along with a few exercises.
+
+Note: This is a non-exhaustive and ad-hoc post that I created for a peer.
 
 1. [Collections](#collections)
 2. [Graphs](#graphs)
