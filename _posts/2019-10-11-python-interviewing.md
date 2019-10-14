@@ -63,7 +63,7 @@ def memory_light(database_conn):
   return max(scores)
 ```
   Remember that generators can be iterated through only once.
-5. Use **memoization** for recursive functions that may be queried more than once. For example, if you need to find the number of permutations of `n` distinct boys and `m` distinct girls, you need `n! * m!`.
+5. Use **memoization** for recursive functions that may be queried more than once. For example, if you need to find the number of permutations of `n` distinct boys and `m` distinct girls in `n` boy slots and `m` girl slots respectively, you need `n! * m!`.
   ```python
 def no_of_permutations(n: int, m: int) -> int:
       _max = max(m, n) + 1
@@ -88,15 +88,15 @@ Use `sorted` along with the `key` and `reverse` args to leverage the most out of
 ```python
 # Assuming records have the format (name, total_votes, timestamp)
 def sort_by_votes(records):
-      # key is a function that accepts a single element
-      # and returns the parameter which you wish to use for sorting
-      return sorted(records, key=lambda x: x[1])
+    # key is a function that accepts a single element
+    # and returns the parameter which you wish to use for sorting
+    return sorted(records, key=lambda x: x[1])
   ```
 
 **Sorting by timestamp, with latest record first**
   ```python
 def sort_by_timestamp(records):
-      return sorted(records, key=lambda x: x[2], reverse=True)
+    return sorted(records, key=lambda x: x[2], reverse=True)
 ```
 
 **Sorting by property**
@@ -105,10 +105,10 @@ Suppose `records` was a list of elements of the type `VoteRecord`
 
 ```python
 class VoteRecord:
-      def __init__(self, name, total_votes, timestamp):
-          self._name = name
-          self._total_votes = total_votes
-          self._timestamp = timestamp
+    def __init__(self, name, total_votes, timestamp):
+        self._name = name
+        self._total_votes = total_votes
+        self._timestamp = timestamp
 ```
 
 then your key can be more descriptive:
@@ -120,7 +120,7 @@ sorted(records, key=lambda x: x._total_votes)
 If you have a function that extracts some property from the element, you can use it directly
 ```python
 def name_length(record):
-  return len(record._name)
+    return len(record._name)
 
 # Sorts records by increasing length of name
 sorted(records, key=name_length)
@@ -144,9 +144,9 @@ The total number of nodes in the graph can either be specified, or derived as:
 
 ```python
 def number_of_nodes(tuples: List[Tuple[Int, Int, Int]]) -> int:
-  srcs = (src for src, _, _ in tuples)
-  dests = (dest for _, dest, _ in tuples)
-  return max(max(srcs), max(dests))
+    srcs = (src for src, _, _ in tuples)
+    dests = (dest for _, dest, _ in tuples)
+    return max(max(srcs), max(dests))
 ```
 
 ### Representations
@@ -157,29 +157,29 @@ There are two popular formats for dealing with graphs:
 
 ```python
 def make_adjacency_matrix(
-    tuples: List[Tuple[Int, Int, Int]],
-    n: int
-  ) -> List[List[Int]]:
-  """
-  Arguments
-  ---------
+      tuples: List[Tuple[Int, Int, Int]],
+      n: int
+    ) -> List[List[Int]]:
+    """
+    Arguments
+    ---------
     tuples: A list of graph records of the format (src, dest, weight)
-    n:  The total number of nodes in the graph
+    n:      The total number of nodes in the graph
 
-  Returns
-  -------
+    Returns
+    -------
     matrix: A 2-D matrix where matrix[src][dest] is equal to
             the weight of the edge from src to dest
-  """
-  # [[math.inf]*n]*n does not work because arrays are pass-by-reference
-  # So the same internal array reference is copied n times
-  # which is not what we want
-  matrix = [[math.inf]*n for _ in range(n)]
+    """
+    # [[math.inf]*n]*n does not work because arrays are pass-by-reference
+    # So the same internal array reference is copied n times
+    # which is not what we want
+    matrix = [[math.inf]*n for _ in range(n)]
 
-  for src, dest, weight in tuples:
-    matrix[src][dest] = weight
+    for src, dest, weight in tuples:
+        matrix[src][dest] = weight
 
-  return matrix
+    return matrix
 ```
 
 The advantage this offers is that you can query for the weight between two nodes in `O(1)`.
@@ -188,25 +188,25 @@ The advantage this offers is that you can query for the weight between two nodes
 
 ```python
 def make_adjacency_list(
-    tuples: List[Tuple[Int, Int, Int]],
-    n: int
-  ) -> Dict[Int, List[Tuple[Int, Int]]]:
-  """
-  Arguments
-  ---------
-    tuples: A list of graph records of the format (src, dest, weight)
-    n:  The total number of nodes in the graph
+      tuples: List[Tuple[Int, Int, Int]],
+      n: int
+    ) -> Dict[Int, List[Tuple[Int, Int]]]:
+    """
+    Arguments
+    ---------
+    tuples:   A list of graph records of the format (src, dest, weight)
+    n:        The total number of nodes in the graph
 
-  Returns
-  -------
+    Returns
+    -------
     adj_list: A dict where adj_list[src] is a list of tuples (dest, weight)
-  """
-  adj_list = defaultdict(list)
+    """
+    adj_list = defaultdict(list)
 
-  for src, dest, weight in tuples:
-    adj_list[src].append((dest, weight))
+    for src, dest, weight in tuples:
+      adj_list[src].append((dest, weight))
 
-  return adj_list
+    return adj_list
 ```
 
 The advantage is that you can get all the neighbors of a node in `O(1)`. This is particularly useful when the graph is sparse, and a adjacency matrix would be mostly empty (count(`math.inf`) ~= n<sup>2</sup>)
@@ -315,9 +315,10 @@ This is not just extra code, it also has higher complexity: finding adjacent nod
     3. `product(iterable1, iterable2)` results in a cross product. So `product("AB", "CD")` would give `[('A', 'C'), ('A', 'D'), ('B', 'C'), ('B', 'D')]`
 3. Use the `join` method on strings to concatenate iterables into strings:
   ```python
-  "".join(["c", "a", "t"]) # gives "cat"
-  ".".join(["10", "0", "0", "1"]) # gives "10.0.0.1"
+"".join(["c", "a", "t"]) # gives "cat"
+".".join(["10", "0", "0", "1"]) # gives "10.0.0.1"
   ```
+4. Instead of `5 < a and a < 100`, you can use `5 < a < 100` which evaluates to the same thing.
 
 ### Exercises
 
@@ -333,7 +334,7 @@ subsequences("cats", 3) # ["cat", "cas", "ats"]
 ```
 1. Given a graph in the above canonical format, find the length of the shortest path from a given node `src` to a node `dest`
 1. Given integers `n` and `k`, print every `k`th Tribonacci number up to (and including)`n`, where the Tribonacci relation is given by:
-{% raw %}
+  {% raw %}
 $$T_1 = 1$$
 
 $$T_2 = 1$$
@@ -342,7 +343,7 @@ $$T_3 = 2$$
 
 $$T_n = T_{n-1} + T_{n-2} + T_{n-3}$$
 {% endraw %}
-Note that $T_0$ is not defined.
+  Note that $T_0$ is not defined.
   ```python
 tribonacci(n=15, k=5) # [7, 147, 3136]
   ```
