@@ -2,7 +2,7 @@
 layout: post
 title:  "Learnings - August 2019"
 date:   2019-08-31 11:43:00 -0700
-category: ["learning", "pinned"]
+category: ["learning"]
 ---
 
 August has been a really good month in that I've made good progress both at work and in my personal project. For work, I feel like I have a better understanding of some of the complex problems that exist right now, and hints about how I can work on solving them. As far as my project on building a toolkit for Wikidata, I understand a lot more about Wikidata, the community and how to develop a flexible tool that can tackle multiple domains.

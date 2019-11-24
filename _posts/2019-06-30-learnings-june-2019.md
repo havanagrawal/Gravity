@@ -2,7 +2,7 @@
 layout: post
 title:  "Learnings - June 2019"
 date:   2019-06-30 11:13:00 -0700
-category: ["learning", "pinned"]
+category: ["learning"]
 ---
 
 I started working at Google (again), recently, which has been incredibly exciting. I also have a couple of side projects ongoing, which keep me fairly occupied (and satisfied). I've also started to come across some brilliant articles that have (and I'm trying not to be dramatic) pretty much changed my life and approach to learning. I've decided to maintain a public log of all the small little snippets of knowledge I gain through these various sources. Here goes the June 2019 edition:

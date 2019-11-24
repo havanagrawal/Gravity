@@ -2,7 +2,7 @@
 layout: post
 title:  "Learnings - July 2019"
 date:   2019-07-31 11:13:00 -0700
-category: ["learning", "pinned"]
+category: ["learning"]
 ---
 
 ## Programming
@@ -12,4 +12,4 @@ category: ["learning", "pinned"]
 
 ## Open Source
 
- * There's more than one way to contribute to open-source. Even contributing to open-source data repositories such as Wikidata is incredibly useful. It also exposes one to the various tools for contributing data, and opens up the platform to improve these tools themselves. 
+ * There's more than one way to contribute to open-source. Even contributing to open-source data repositories such as Wikidata is incredibly useful. It also exposes one to the various tools for contributing data, and opens up the platform to improve these tools themselves.
