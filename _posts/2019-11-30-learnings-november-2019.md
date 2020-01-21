@@ -2,7 +2,7 @@
 layout: post
 title:  "Learnings - November 2019"
 date:   2019-11-30 10:43:00 -0700
-category: ["learning", "pinned"]
+category: ["learning"]
 ---
 
 A continued streak of excellent sci-fi novels, and a significant increase in productivity.

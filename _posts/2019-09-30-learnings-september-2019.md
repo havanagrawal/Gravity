@@ -2,7 +2,7 @@
 layout: post
 title:  "Learnings - September 2019"
 date:   2019-09-30 11:43:00 -0700
-category: ["learning", "pinned"]
+category: ["learning"]
 ---
 
 September was mostly uneventful. I received some praise and some critical feedback at work, which I am trying to incorporate into my daily work.
