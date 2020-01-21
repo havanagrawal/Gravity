@@ -24,13 +24,13 @@ This post captures some different dimensions of the past year.
 
 #### Best Movie
 
- * Tied between [Kimi No Na Wa] and [Avengers: Endgame]
+ * Tied between [Kimi No Na Wa](https://www.imdb.com/title/tt5311514) and [Avengers: Endgame](https://www.imdb.com/title/tt4154796)
 
 #### Best TV Series
 
- 1. [Dark]
- 1. [The OA]
- 1. [Chernobyl]
+ 1. [Dark](https://www.imdb.com/title/tt5753856)
+ 1. [The OA](https://www.imdb.com/title/tt4635282)
+ 1. [Chernobyl](https://www.imdb.com/title/tt7366338)
 
 #### Best Book
 
