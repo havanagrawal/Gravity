@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The TypeScript CheatSheet"
-date:   2020-02-20 11:13:00 -0700
+date:   2021-02-20 11:13:00 -0700
 category: ["learning"]
 ---
 
