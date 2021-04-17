@@ -42,7 +42,7 @@ for name, votes in records:
 candidates = {name for name, _ in records}
 ```
 
-4. Use **generators** for collections that are iterated through only once/are expensive to hold in memory at once:  
+4. Use **generators** for collections that are iterated through only once/are expensive to hold in memory at once:
   ```python
 def memory_heavy(database_conn):
   # Loads 1 million records into memory
@@ -74,7 +74,18 @@ def no_of_permutations(n: int, m: int) -> int:
           factorial[i] = factorial[i - 1] * i
       return factorial[m] * factorial[n]
 ```
-6. Use `zip` to iterate through two collections in lock-step:
+6. If you are unable to come up with the memoized version, you can leverage the `@lru_cache` decorator.
+  ```python
+from functools import lru_cache
+
+@lru_cache()
+def factorial(n: int) -> int:
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+```
+  This will compute the factorial for each `n` only once.
+7. Use `zip` to iterate through two collections in lock-step:
   ```python
 names = ["Peter", "Carl", "Emma"]
 votes = [20, 10, 50]
