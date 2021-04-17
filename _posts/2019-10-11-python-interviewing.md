@@ -80,9 +80,9 @@ def no_of_permutations(n: int, m: int) -> int:
 from functools import lru_cache
 @lru_cache()
 def factorial(n: int) -> int:
-    if n == 0 or n == 1:
-        return 1
-    return n * factorial(n - 1)
+      if n == 0 or n == 1:
+          return 1
+      return n * factorial(n - 1)
 ```
   This will compute the factorial for each `n` only once.
 7. Use `zip` to iterate through two collections in lock-step:
