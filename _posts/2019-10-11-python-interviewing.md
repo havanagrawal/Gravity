@@ -74,6 +74,7 @@ def no_of_permutations(n: int, m: int) -> int:
           factorial[i] = factorial[i - 1] * i
       return factorial[m] * factorial[n]
 ```
+
 6. If you are unable to come up with the memoized version, you can leverage the `@lru_cache` decorator.
   ```python
 from functools import lru_cache
