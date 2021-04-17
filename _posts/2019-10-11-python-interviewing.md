@@ -76,7 +76,7 @@ def no_of_permutations(n: int, m: int) -> int:
 ```
 
 6. If you are unable to come up with the memoized version, you can leverage the `@lru_cache` decorator:
-  ```python3
+  ```python
 from functools import lru_cache
 @lru_cache()
 def factorial(n: int) -> int:
