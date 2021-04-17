@@ -56,7 +56,7 @@ There are three ways you can declare a variable in TS: `var`, `let` and `const`.
 
 ## Types
 
-Reference: [The TypeScript Handbook: Basic Types](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+Reference: [The TypeScript Handbook: Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
 
 ```typescript
 // Basic Types
@@ -115,6 +115,18 @@ const nullNumber: number = null;
 const o: object = {'name': 'Douglas'};
 ```
 
+## Arrays
+
+```typescript
+let numArr: number[] = [1, 2, 3]
+let strArr: string[] = ["hello", "bye"]
+
+strArr.join(); // "hello, bye"
+strArr.join(""); // "hellobye"
+
+let arrLen = strArr.length; // length is a property on Arrays.prototype
+```
+
 ## Jargon
 
 ### Temporal Dead Zone
@@ -165,10 +177,10 @@ for (var i = 0; i < 10; i++) {
 for (var i = 0; i < 10; i++) {
   // capture the current state of 'i'
   // by invoking a function with its current value
-  (function (i) {
+  (function (x) {
     setTimeout(function () {
-      console.log(i);
-    }, 100 * i);
+      console.log(x);
+    }, 100 * x);
   })(i);
 }
 ```
