@@ -44,6 +44,7 @@ Code generation has changed the way I perceive a lot of problems in software eng
 ```json
 {
     "name": "Cixin Liu",
+    "description": "...",
     "author_id": 5
 }
 ```
@@ -62,3 +63,7 @@ assert jsonBook.equals(jsonString);
 ```
 
 Given a JSON schema, how can you achieve this? Can you easily add new object types? How would you handle objects with missing fields?
+
+2.   Given a set of `Book` and `Author` JSON objects, you want to create a website that serves corresponding **static** webpages for them (think Goodreads sans Javascript). The author page should contain a list of all the books that author has written. The book page should list the title, description author and genres.
+
+How can you achieve this? Would this be an instance of _passive_ or _active_ code generation? Can you easily add styling (CSS) across your website? When would you want to move to dynamic pages?
