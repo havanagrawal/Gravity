@@ -2,7 +2,7 @@
 layout: post
 title:  "Learnings - December 2019"
 date:   2019-12-31 10:43:00 -0700
-category: ["learning", "pinned"]
+category: ["learning"]
 ---
 
 ## Articles
