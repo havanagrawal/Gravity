@@ -31,7 +31,7 @@ Code generation has changed the way I perceive a lot of problems in software eng
 
 1.   You own an API that sends and receives JSON to manage books and their reviews (think Goodreads). You have a few different objects, and plan to add more in the future. Currently, you have `Book` and `Author` that typically look like this:
 
-```json
+        ```json
 {
     "book_id": 3,
     "title": "Three-Body Problem",
@@ -39,18 +39,16 @@ Code generation has changed the way I perceive a lot of problems in software eng
     "author_ids": [5],
     "genres": ["sci-fi", "fantasy"]
 }
-```
+        ```
 
-```json
+        ```json
 {
     "name": "Cixin Liu",
     "description": "...",
     "author_id": 5
 }
-```
-
+        ```
 Instead of accessing these fields as `JSON.parse(s).getFieldAsString("title")`, you want to be able to instead do something like:
-
 ```java
 // jsonBook is a JSON string
 Book book = Book.parse(jsonBook);
@@ -61,9 +59,8 @@ for (String genre: book.getGenres()) {
 String jsonString = book.toJsonString();
 assert jsonBook.equals(jsonString);
 ```
-
 Given a JSON schema, how can you achieve this? Can you easily add new object types? How would you handle objects with missing fields?
 
-2.   Given a set of `Book` and `Author` JSON objects, you want to create a website that serves corresponding **static** webpages for them (think Goodreads sans Javascript). The author page should contain a list of all the books that author has written. The book page should list the title, description author and genres.
+2.   Given a set of `Book` and `Author` JSON objects, you want to create a website that serves corresponding **static** webpages for them (think Goodreads sans Javascript). The author page should contain a list of all the books that author has written. The book page should list the title, description, author and genres.
 
-How can you achieve this? Would this be an instance of _passive_ or _active_ code generation? Can you easily add styling (CSS) across your website? When would you want to move to dynamic pages?
+        How can you achieve this? Would this be an instance of _passive_ or _active_ code generation? Can you easily add styling (CSS) across your website? When would you want to move to dynamic pages?
