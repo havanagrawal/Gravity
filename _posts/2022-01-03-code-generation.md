@@ -10,7 +10,7 @@ After completing my undergraduate degree, my first stint was a software develope
  - [_Programming Pearls_ by Jon Bentley](https://www.goodreads.com/book/show/52084.Programming_Pearls)
  - [_The Pragmatic Programmer_ by Andy Hunt and Dave Thomas](https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer)
 
-While I didn't know it then, these would become some of the most influential books I would read in my career, and ones I would return to time and again. Some of those ideas made intuitive sense; knowing the shell has indeed paid off compounded dividends over the years, version control helped keep a lot of my college projects sane, programming deliberately and methodically (as opposed to programming by coincidence) cultivated good long-term habits, and broadening one's knowledge portfolio is just common sense.
+While I didn't know it then, these would become some of the most influential books I would read in my career, and ones I would return to time and again. Some of the ideas outlined in these books made intuitive sense; knowing the shell has indeed paid off compounded dividends over the years, version control helped keep a lot of my college projects sane, programming deliberately and methodically (as opposed to programming by coincidence) cultivated good long-term habits, and broadening one's knowledge portfolio is just common sense.
 
 However, as a fresh graduate, with no experience on enterprise or large-scale software, some of the key ideas in the book were lost to me. Why write elaborate DSLs when I can knock out a decent parser in a few hours? Why spend time estimating when you can spend all that time developing? And in what circumstances would I want to _generate code_?
 
@@ -20,8 +20,10 @@ In the past few years, however, I've learned to appreciate and leverage the imme
 1.   Spring Boot/Spring MVC projects and their ilk typically had a "quick start" invocation that would generate all the boilerplate for a working "Hello, world!" application that you could use as a starting point.
 
 In contrast, _**active code generators**_ generate code on-the-fly, and the generated code reflects changes in the original source file.
-1.    In Java, one of the most common implementations is _annotation processing_. For example, if you use Project Lombok, you can annotate your fields with `@Getter` and `@Setter`, and the annotation processor will generate those methods for you at build time. A Python equivalent is the `dataclasses` library, which is a must-know tool in your Python.
-1.   Yet another form is to generate code at build-time from data or template (e.g. [`mustache`](https://mustache.github.io/mustache.5.html)) files. Protocol buffers are a prime example; `message`s in a `.proto` file describe the schema of data that might be transmitted over the network or persisted into a data store. Build systems can then generate source code (typically classes) in a variety of languages.
+1.    In Java, one of the most common implementations is _annotation processing_. For example, if you use Project Lombok, you can annotate your fields with `@Getter` and `@Setter`, and the annotation processor will generate those methods for you at build time. Similarly, `@EqualsAndHashCode` generates the `equals` and `hashCode` methods, `@ToString` generates a `toString` implementation, and `@Data` wraps all of of these into one single convenient meta-annotation.
+
+         A Python equivalent is the `dataclasses` library, which IMO is a must-know tool in your Python repertoire.
+1.   Yet another form is to generate code at build-time from data or template (e.g. [`mustache`](https://mustache.github.io/mustache.5.html)) files. Protocol buffers are a prime example; `message`s in a `.proto` file describe the schema of data that might be transmitted over the network or persisted into a data store. Build systems can then generate source code (typically classes) in a variety of languages for these data.
 
 A key difference between passively generated code vs actively generated code is that the former typically gets checked into source control as is, whereas the latter is not (since it is generated at build time from other input source files).
 
